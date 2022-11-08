@@ -15,4 +15,7 @@ const chunk = (array: string[], size: number) => {
 };
 
 chunk(['a', 'b', 'c', 'd'], 1);
+chunk(['a', 'b', 'c', 'd'], 2);
+chunk(['a', 'b', 'c', 'd'], 3);
+chunk(['a', 'b', 'c', 'd'], 4);
 

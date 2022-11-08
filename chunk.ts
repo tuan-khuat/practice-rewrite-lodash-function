@@ -1,9 +1,18 @@
-// _.xorBy([2.1, 1.2], [2.3, 3.4], Math.floor);
-// // => [1.2, 3.4]
+// _.chunk(['a', 'b', 'c', 'd'], 2);
+// // => [['a', 'b'], ['c', 'd']]
 
-// // The `_.property` iteratee shorthand.
-// _.xorBy([{ x: 1 }], [{ x: 2 }, { x: 1 }], 'x');
-// // => [{ 'x': 2 }]
+// _.chunk(['a', 'b', 'c', 'd'], 3);
+// // => [['a', 'b', 'c'], ['d']]
 
+const chunk = (array: string[], size: number) => {
+    const newArray: string[][] = [];
+    for (let i = 0; i < array.length; i += size) {
+        let step = i + size;
+        let sizeArray = array.slice(i, step);
+        newArray.push(sizeArray);
+    }
+    console.log(newArray);
+};
 
+chunk(['a', 'b', 'c', 'd'], 1);
 

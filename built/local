@@ -1,0 +1,15 @@
+var chunk = function (array, size) {
+    var newArray = [];
+    for (var i = 0; i < array.length; i += size) {
+        var step = i + size;
+        var sizeArray = array.slice(i, step);
+        newArray.push(sizeArray);
+    }
+    console.log(newArray);
+};
+chunk(['a', 'b', 'c', 'd'], 1);
+chunk(['a', 'b', 'c', 'd'], 2);
+chunk(['a', 'b', 'c', 'd'], 3);
+chunk(['a', 'b', 'c', 'd'], 4);
+console.log('hello');
+//# sourceMappingURL=local.map

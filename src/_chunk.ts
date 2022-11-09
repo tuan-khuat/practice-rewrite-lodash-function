@@ -4,18 +4,19 @@
 // _.chunk(['a', 'b', 'c', 'd'], 3);
 // // => [['a', 'b', 'c'], ['d']]
 
-const chunk = (array: string[], size: number) => {
-    const newArray: string[][] = [];
-    for (let i = 0; i < array.length; i += size) {
-        let step = i + size;
-        let sizeArray = array.slice(i, step);
-        newArray.push(sizeArray);
-    }
-    console.log(newArray);
+const chunk = <T>(array: T[], size: number): T[][] => {
+  const newArray: T[][] = [];
+  for (let i = 0; i < array.length; i += size) {
+    const start = i;
+    const end = i + size;
+    const sizeArray = array.slice(start, end);
+    newArray.push(sizeArray);
+  }
+  return newArray;
 };
 
-chunk(['a', 'b', 'c', 'd'], 1);
-chunk(['a', 'b', 'c', 'd'], 2);
-chunk(['a', 'b', 'c', 'd'], 3);
-chunk(['a', 'b', 'c', 'd'], 4);
-
+const x = chunk([1, "b", "c", "d"], 1);
+console.log(chunk(["a", "b", "c", "d"], 1));
+console.log(chunk(["a", "b", "c", "d"], 2));
+console.log(chunk(["a", "b", "c", "d"], 3));
+console.log(chunk(["a", "b", "c", "d"], 4));

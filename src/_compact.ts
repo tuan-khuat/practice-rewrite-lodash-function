@@ -4,11 +4,11 @@
 const compact = (array: Array<string | number | boolean>) => {
     let newArr = [];
     for (let item of array) {
-        item && newArr.push(item)
+        item && newArr.push(item);
     }
-    console.log(newArr);
+    return newArr;
 };
 
-compact([0, 1, false, 2, '', 3]);
-compact(["", 1, false, 2, '', 3]);
-compact([0, 1, false, true, '', 3]);
+console.log(compact([0, 1, false, 2, '', 3]));
+console.log(compact(['', 1, false, 2, '', 3]));
+console.log(compact([0, 1, false, true, '', 3]));

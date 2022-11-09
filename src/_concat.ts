@@ -16,10 +16,10 @@ const _concat = (
     for (let item of array) {
         typeof item != 'number' ? newArr.push(item[0]) : newArr.push(item);
     }
-    console.log(newArr);
+    return newArr;
 };
 
 var array: Array<number> = [1];
-_concat(array, 2, [3], [[4]]);
-_concat(array, 2, [[3]], [[4]]);
-_concat(array, 2, [3], [[4]]);
+console.log(_concat(array, 2, [3], [[4]]));
+console.log(_concat(array, 2, [[3]], [[4]]));
+console.log(_concat(array, 2, [3], [[4]]));

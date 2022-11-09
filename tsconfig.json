@@ -1,10 +1,9 @@
 {
     "compilerOptions": {
-        "module": "amd",
+        "module": "commonJS",
         "noImplicitAny": true,
         "removeComments": true,
         "preserveConstEnums": true,
-        "outFile": "./built/local/",
         "sourceMap": true
     },
     "include": ["./src/**/*"],

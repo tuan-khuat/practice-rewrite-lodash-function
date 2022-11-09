@@ -5,7 +5,7 @@
 const _difference = <T>(array: T[], conditionArray: T[]): T[] => {
     const newArr: T[] = [];
     for (let item of array) {
-       !conditionArray.includes(item) && newArr.push(item)
+        !conditionArray.includes(item) && newArr.push(item);
     }
     return newArr;
 };

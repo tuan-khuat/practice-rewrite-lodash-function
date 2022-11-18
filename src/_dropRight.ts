@@ -1,6 +1,6 @@
 const _dropRight = <T>(array: T[], size: number = 1): T[] => {
     const newArr = [...array];
-    newArr.reverse().splice(0, size);
+    newArr.reverse().slice(0, size);
     return newArr.reverse();
 };
 

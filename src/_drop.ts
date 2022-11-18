@@ -1,6 +1,6 @@
 const _drop = <T>(array: T[], size: number = 1): T[] => {
     const newArr = [...array];
-    newArr.splice(0, size);
+    newArr.slice(0, size);
     return newArr;
 };
 

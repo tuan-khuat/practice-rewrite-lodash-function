@@ -5,8 +5,7 @@ const _fill = <T>(
     start: number = 0,
     end: number = array.length
 ) => {
-    console.log(start, end);
-    var newArr: T[] = array;
+    const newArr: T[] = [...array];
     for (let i = start; i < end; i++) {
         newArr[i] = value;
     }
